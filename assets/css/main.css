@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-light-blue: #e0e8ff;
+    --color-blue: #3829e0;
+    --color-light: #f5f7ff;
+    --color-gray: #7280a7;
+    --color-dark: #1f2f56;
+    --font-family: 'Red Hat Display', sans-serif;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-light-blue: #e0e8ff;
+    --color-blue: #1388cc;
+    --color-light: #081138;
+    --color-gray: #93a9e7;
+    --color-dark: #aef38e;
+    --font-family: 'Red Hat Display', sans-serif;
+  }
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+img {
+  max-width: 100%;
+}
+
+.button {
+  width: 100%;
+  border: none;
+  background: var(--color-dark);
+  color: var(--color-light);
+  padding: 14px 0;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.button-primary {
+  background: var(--color-blue);
+}
+.button-secondary {
+  background: transparent;
+  color: var(--color-gray);
+}
+
+.main {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--color-light-blue);
+  display: grid;
+  place-items: center;
+  padding: 60px 0;
+}
+
+.card {
+  width: 90%;
+  max-width: 350px;
+  background: var(--color-light);
+  color: var(--color-gray);
+  text-align: center;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 4px 4px 14px 2px rgba(0, 0, 0, 0.2);
+}
+.card-body {
+  padding: 20px;
+}
+.card-body h2, h4 {
+  color: var(--color-dark);
+}
+.card-body p.description {
+  margin: 20px;
+  line-height: 150%;
+}
+.card-plan {
+  background: #f0f0f0;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  text-align: left;
+  column-gap: 15px;
+}
+.card-plan a {
+  font-weight: 700;
+  color: var(--color-blue);
+}
+.card-actions {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .main {
+    padding: 20px 0;
+  }
+
+  .card-body {
+    padding: 30px;
+  }
+  .card-plan {
+    padding: 10px 15px;
+  }
+}
